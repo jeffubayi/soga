@@ -1,10 +1,9 @@
 {
-  "name": "mern-chat-app",
+  "name": "soga-backend",
   "version": "1.0.0",
   "main": "server.js",
-  "repository": "https://github.com/abid1174/mern-chat-app.git",
-  "author": "abid1174 <abidalamin7@gmail.com>",
-  "license": "MIT",
+  "repository": "https://github.com/jeffubayi/soga.git",
+  "author": "jeffubayi <jeffubayi@gmail.com>",
   "scripts": {
     "start": "nodemon server.js"
   },
