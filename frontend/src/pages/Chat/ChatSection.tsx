@@ -89,14 +89,14 @@ export default function ChatSection({}: Props) {
             </div>
           </div>
         </div>
-        <div className="flex items-center space-x-2">
-          {/* <button className="inline-flex items-center justify-center rounded-full h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-400">
+        {/* <div className="flex items-center space-x-2">
+          <button className="inline-flex items-center justify-center rounded-full h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-400">
             item
           </button>
           <button className="inline-flex items-center justify-center rounded-full h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-400">
             item
-          </button> */}
-        </div>
+          </button>
+        </div> */}
       </div>
       <Messages chatId={chatId} />
       <MessageInput handleSubmit={handleSendMessage} />

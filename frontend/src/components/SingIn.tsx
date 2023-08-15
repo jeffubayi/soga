@@ -69,9 +69,9 @@ export default function SingIn({ handleChangeForm }: IProps) {
           className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none"
           type="password"
         />
-        {/* {errors.password?.type === "required" && (
+        {errors.password?.type === "required" && (
           <span className="text-red-400 text-xs">Password is required</span>
-        )} */}
+        )}
       </div>
       <div className="flex justify-between text-gray-400 py-2">
         <p className="flex items-center">

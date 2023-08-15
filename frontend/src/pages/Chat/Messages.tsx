@@ -49,7 +49,9 @@ function Messages({ chatId }: Props) {
           );
         })
       ) : (
-        <div>No Messages</div>
+        <div className="flex-1 flex justify-center items-center text-white text-md">
+                  No messages yet
+                </div>
       )}
     </div>
   );

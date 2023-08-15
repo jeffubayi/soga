@@ -1,59 +1,22 @@
-import React, { useEffect, useState } from "react";
-import Button from "components/Button";
-import { useAppDispatch, useAppSelector } from "redux/store";
-import { useUpdateProfileImageMutation } from "redux/user/userService";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-type Props = {};
 
-export default function EditProfile({}: Props) {
+export default function EditProfile() {
+
   const navigate = useNavigate();
-  const [previewImage, setPreviewImage] = useState<any>("");
-  const dispatch = useAppDispatch();
-  const { id } = useAppSelector((state) => state.user.data);
 
-  const [handleUpdateImage, { isSuccess, isLoading }] =
-    useUpdateProfileImageMutation();
-
-  const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.currentTarget?.files?.[0];
-    previewFile(file);
-  };
-
-  const previewFile = (file: File | undefined) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file as File);
-    reader.onloadend = () => {
-      setPreviewImage(reader.result);
-    };
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    navigate("/")
-  };
-
-  // const uploadProfileImage = (base64Image: string) => {
-  //   handleUpdateImage({ userId: id, image: base64Image });
-  // };
-
-  useEffect(() => {
-    
-  }, [isSuccess])
+  function handleClick() {
+    navigate("/");
+  }
 
   return (
     <div>
-      {/* <h2 className="text-white mb-4 font-bold">Change Profile Picture</h2> */}
-      <form onSubmit={handleSubmit}>
-        {/* <input type="file" name="image" onChange={handleFileInputChange} /> */}
-        <div className="mt-2">
-          <Button type="submit">
-            <>logout</>
-          </Button>
-        </div>
-      </form>
-      {/* <div>
-        {previewImage && <img src={previewImage} alt="profile-image" />}
-      </div> */}
+      <button
+        className="bg-primary px-4 py-2 rounded w-full"
+        onClick={handleClick}
+      >
+        Logout
+      </button>
     </div>
   );
 }

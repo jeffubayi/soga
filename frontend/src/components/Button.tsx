@@ -9,7 +9,7 @@ type Props = {
 export default function Button({ children, type, handleClick }: Props) {
   return (
     <button
-      className="bg-primary px-4 py-2 rounded w-full"
+      className="bg-primary px-4 py-2 rounded"
       type={type}
       onClick={handleClick}
     >
