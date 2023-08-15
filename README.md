@@ -1,4 +1,4 @@
-# CHAT-APP
+# SOGA
 A realtime chat application built with React, Redux, Express, SocketIO and MongoDB.
 
 ## Installation
